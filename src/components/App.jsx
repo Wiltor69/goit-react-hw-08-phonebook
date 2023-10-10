@@ -31,29 +31,24 @@ export const App = () => {
           <Route index element={<HomePage />} />
 
           <Route
-            path="/register"
+            path="register"
             element={
-              <RestrictedRoute
-                redirectTo="/login"
-                component={<RegisterPage />}
-              />
+              <RestrictedRoute redirectTo="/" component={<RegisterPage />} />
             }
           />
           <Route
-            path="/login"
+            path="login"
             element={
-              <RestrictedRoute
-                redirectTo="/contacts"
-                component={<LoginPage />}
-              />
+              <RestrictedRoute redirectTo="/" component={<LoginPage />} />
             }
           />
           <Route
-            path="/contacts"
+            path="contacts"
             element={
-              <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+              <PrivateRoute redirectTo="/" component={<ContactsPage />} />
             }
           />
+          {/* <Route path="*" element={<HomePage />} /> */}
         </Route>
       </Routes>
       <GlobalStyle />

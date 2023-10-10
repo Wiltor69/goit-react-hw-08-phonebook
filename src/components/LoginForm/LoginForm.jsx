@@ -13,18 +13,6 @@ const schema = Yup.object({
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
-  //   dispatch(
-  //     userLogIn({
-  //       email: form.elements.email.value,
-  //       password: form.elements.password.value,
-  //     })
-  //   );
-  //   form.reset();
-  // };
-
   return (
     <Block>
       <Formik
